@@ -1,12 +1,26 @@
 import Link from "next/link";
-import Header from "../components/Header";
+import Layout from "../components/Layouts";
+
+const PostLink = props => {
+  return (
+    <li>
+      <Link href={`/post?title=${props.title}`}>
+        <a>{props.title}</a>
+      </Link>
+    </li>
+  );
+};
 
 const Index = () => {
   return (
-    <div>
-      <Header />
-      <h1>Index.js Page</h1>
-    </div>
+    <Layout>
+      <h1>Index Page</h1>
+      <ul>
+        <PostLink title="Hello Next.js" />
+        <PostLink title="Learn Next.js" />
+        <PostLink title="Deploy Apps with Zeit" />
+      </ul>
+    </Layout>
   );
 };
 

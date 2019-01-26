@@ -1,9 +1,8 @@
-import Header from "../components/Header";
+import Layout from "../components/Layouts";
 
 const About = () => {
   return (
-    <div>
-      <Header />
+    <Layout>
       <h1>About Page in Next.js</h1>
       <style jsx>
         {`
@@ -17,7 +16,7 @@ const About = () => {
           }
         `}
       </style>
-    </div>
+    </Layout>
   );
 };
 
